@@ -1,22 +1,39 @@
+
+h2 {
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
 .hero {
   background-color: #eaeaea;
   text-align: center;
   padding: 50px;
 }
 
-h2 {
-  font-size: 34px;
-  font-weight: 200;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-weight: 500;
-}
-
 a {
   text-decoration: none;
+  color: #00C46A
+}
+
+
+.btn {
+  display: inline-block;
+  background-color: white;
+  border: 1px solid lightgray;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 5px;
+  min-width: 50px;
+}
+
+.btn-primary {
+  background-color: #00C46A;
+  color: white;
+  padding: 5px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
 }
 
 .btn-xl {
@@ -29,6 +46,28 @@ a {
   padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.tutorial {
+  text-align: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorial > ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.tutorial > ul > li {
+  width: 250px;
+}
+
+.tutorial > ul > li > a {
+  display: block;
 }
 
 .perks {

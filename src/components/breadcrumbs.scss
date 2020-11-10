@@ -1,0 +1,22 @@
+.breadcrumbs {
+  list-style: none;
+  text-align: center;
+  margin: 0 !important;
+  padding: 10px;
+  color: lightgray;
+
+  
+
+  li {
+    display: inline;
+    margin: 0;
+    padding: 10px;
+
+    a {
+      color: lightgray;
+    }
+    a:hover {
+      color: #00C46A;
+    }
+  }
+}

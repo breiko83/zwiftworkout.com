@@ -6,7 +6,7 @@ import Icon from '../images/icon.png'
 import Facebook from '../images/facebook.png'
 import Twitter from '../images/twitter.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBolt, faLaptop, faCloud, faPiggyBank, faRunning, faBiking } from '@fortawesome/free-solid-svg-icons'
+import { faBolt, faLaptop, faCloud, faPiggyBank, faRunning, faBiking, faUpload } from '@fortawesome/free-solid-svg-icons'
 
 import './index.css'
 
@@ -72,13 +72,23 @@ const IndexPage = () => {
       <div className="share" id="share">
         <h2>Do you like this?</h2>
         <p>Please help me out by sharing this page on Social Media</p>
-        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Zwift%20Workout%20%20Editor%20https://www.zwiftworkout.com/">
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Zwift%20Workout%20Editor%20https://www.zwiftworkout.com/">
           <img src={Twitter} alt="Twitter" width="80" />
         </a>
         <a href="#share" onClick={shareOnFacebook}>
           <img src={Facebook} alt="Facebook" width="80" />
         </a>
       </div>
+    </div>
+    <div className="tutorial">
+      <h2>How To</h2>
+      <p>Using Zwift Workout Editor should be pretty easy and I'm pretty sure you won't need instructions.</p>
+      <p>If you do don't worry - I've put together few quick How To articles for you.</p>
+      <ul className="tutorials">
+        <li><FontAwesomeIcon icon={faBiking} size="lg" fixedWidth /> <Link to="/how-to-create-a-custom-cycling-workout-for-zwift"> How to create a custom cycling Workout for Zwift</Link></li>
+        <li><FontAwesomeIcon icon={faRunning} size="lg" fixedWidth /> <Link to="/how-to-create-a-custom-running-workout-for-zwift"> How to create a custom running Workout for Zwift</Link></li>
+        <li><FontAwesomeIcon icon={faUpload} size="lg" fixedWidth /> <Link to="/how-to-import-a-custom-workout-on-zwift"> How to import a custom workout on Zwift</Link></li>
+      </ul>      
     </div>
     <div className="black">
       <div className="about">

@@ -1,12 +1,19 @@
 ---
 title: How to create a custom cycling Workout for Zwift
-description: A simple guide on how to quickly create a custom ZWO file and run it on Zwift  
+description: A simple guide on how to quickly create a custom cycling ZWO file and run it on Zwift  
 author: Carlo Schiesaro
 ---
 
+import './post.scss'
+import BreadCrumbs from '../components/breadcrumbs'
+
+<div className="post">
+
+<BreadCrumbs title={props.pageContext.frontmatter.title}/>
+
 <h1>{props.pageContext.frontmatter.title}</h1>
 
-These instrutions are for custom cycling workouts. Click the following link if you are looking for [how to create custom running workouts for Zwift]() instructions.
+These instrutions are for custom **cycling workouts**. Click the following link if you are looking for [how to create custom running workouts for Zwift](/how-to-create-a-custom-running-workout-for-zwift) instructions.
 
 ## 1. Open Zwift Workout Editor on your browser
 
@@ -37,7 +44,11 @@ You are ready to save and download your workout. Click Save to set a Title, Desc
 
 Saving the workout will also save a copy in the cloud so you can retrieve it in the future or share it with your friends.
 
-Click download to save the workout file and import it on Zwift. Follow these instructions on [how import your workout on Zwift]() based on your platform (PC / Mac / Apple TV / iOS)
+Click download to save the workout file and import it on Zwift. Follow these instructions on [how to import a custom workout on Zwift](/how-to-import-a-custom-workout-on-zwift) based on your platform (PC / Mac / Apple TV / iOS)
 
+> ### Tip
 > You can also choose not to create an account. Just edit the form and click Dismiss.
 
+<cite>Published on 10/11/2020 by {props.pageContext.frontmatter.author}</cite>
+
+</div>

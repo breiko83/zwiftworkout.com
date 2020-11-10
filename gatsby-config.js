@@ -6,13 +6,19 @@
 
 module.exports = {
   siteMetadata: {
-    title: `zwiftworkout.com`,
+    title: `Zwift Workout Editor`,
     description: `Edit and share your Zwift workouts directly from your browser`,
     author: `Carlo Schiesaro`,
   },
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-react-helmet`,        
+    `gatsby-plugin-react-helmet`,   
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://www.zwiftworkout.com`,
+      },
+    },     
     `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,5 +43,14 @@ module.exports = {
         },
       }
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Roboto']
+        }
+      }
+    },
+    `gatsby-plugin-sass`
   ],
 }

@@ -29,10 +29,8 @@ const Layout = ({ pageContext, children }) => {
     <>
       <Header siteTitle={pageContext?.frontmatter.title || data.site.siteMetadata?.title} />
       <SEO title={pageContext?.frontmatter.title || data.site.siteMetadata?.title} description={pageContext?.frontmatter.description}/>
-      <div className="container">
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <main>{children}</main>
+      <Footer />
     </>
   )
 }

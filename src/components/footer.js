@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import React from "react"
 import "./footer.css"
 
@@ -6,14 +7,10 @@ const Footer = () => (
     <ul>
       <li>Zwift Workout v1.4 &copy; 2020 Sharpify Ltd All Rights Reserved</li>
       <li>
-        <a href="#terms">
-          Terms of Service
-        </a>
+        <Link to="/terms">Terms of Service</Link>
       </li>
       <li>
-        <a href="#privacy">
-          Privacy Policy
-        </a>
+        <Link to="/privacy">Privacy Policy</Link>
       </li>
       <li>
         <a href="https://github.com/breiko83/zwo-editor" target="blank">

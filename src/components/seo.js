@@ -37,7 +37,7 @@ function SEO({ description, lang, meta, title, url }) {
   const defaultTitle = title || site.siteMetadata.title
   const metaDescription = description || site.siteMetadata.description  
   const metaUrl = url ? site.siteMetadata.url + url : site.siteMetadata.url
-  const image = file.childImageSharp.fluid.src
+  const image = site.siteMetadata.url + file.childImageSharp.fluid.src
 
   return (
     <Helmet

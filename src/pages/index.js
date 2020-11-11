@@ -25,9 +25,9 @@ const IndexPage = () => {
     <div className="hero">
       <img src={Icon} alt="logo" width="100" />
       <h1>Zwift Workout Editor</h1>
-      <Link to="/editor/new" className="btn btn-primary btn-xl">
+      <a href="/editor/new" className="btn btn-primary btn-xl">
         Open Editor
-      </Link>
+      </a>
     </div>
     <div className="features">
       <h2>Top features</h2>
@@ -82,8 +82,8 @@ const IndexPage = () => {
     </div>
     <div className="tutorial">
       <h2>How To</h2>
-      <p>Using Zwift Workout Editor should be pretty easy and I'm pretty sure you won't need instructions.</p>
-      <p>If you do don't worry - I've put together few quick How To articles for you.</p>
+      <p>Using Zwift Workout Editor should be pretty easy and I'm sure you won't need instructions.</p>
+      <p>In case you do don't worry - I've put together few quick How To articles for you.</p>
       <ul className="tutorials">
         <li><FontAwesomeIcon icon={faBiking} size="lg" fixedWidth /> <Link to="/how-to-create-a-custom-cycling-workout-for-zwift"> How to create a custom cycling Workout for Zwift</Link></li>
         <li><FontAwesomeIcon icon={faRunning} size="lg" fixedWidth /> <Link to="/how-to-create-a-custom-running-workout-for-zwift"> How to create a custom running Workout for Zwift</Link></li>

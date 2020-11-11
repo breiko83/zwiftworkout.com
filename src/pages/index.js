@@ -4,8 +4,12 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt, faLaptop, faCloud, faPiggyBank, faRunning, faBiking, faUpload } from '@fortawesome/free-solid-svg-icons'
-
 import './index.css'
+
+// bugfix for giant icons
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
 
 const IndexPage = ({data}) => {
 

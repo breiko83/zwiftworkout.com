@@ -9,6 +9,8 @@ module.exports = {
     title: `Zwift Workout Editor`,
     description: `Edit and share your Zwift workouts directly from your browser`,
     author: `Carlo Schiesaro`,
+    url: 'https://www.zwiftworkout.com',
+    image: 'logo.png'
   },
   /* Your site config here */
   plugins: [

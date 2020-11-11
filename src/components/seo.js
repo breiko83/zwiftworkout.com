@@ -10,8 +10,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+function SEO({ description, lang, meta, title, url }) {
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,22 +19,33 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            url
+            image
+          }
+        }
+        file(relativePath: { eq: "icon.png" }) {
+          childImageSharp {
+            fluid {
+              src
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title === title ? null : site.siteMetadata?.title
+  const defaultTitle = title || site.siteMetadata.title
+  const metaDescription = description || site.siteMetadata.description  
+  const metaUrl = url ? site.siteMetadata.url + url : site.siteMetadata.url
+  const image = file.childImageSharp.fluid.src
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s` : null}
+      title={defaultTitle}
+      titleTemplate={defaultTitle}
       meta={[
         {
           name: `description`,
@@ -42,7 +53,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           property: `og:description`,
@@ -51,6 +62,14 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
+          property: `og:image`,
+          content: image,
         },
         {
           name: `twitter:card`,
@@ -62,7 +81,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,

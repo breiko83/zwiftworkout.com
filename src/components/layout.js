@@ -14,7 +14,7 @@ import "./layout.css"
 import SEO from "./seo"
 import Footer from "./footer"
 
-const Layout = ({ pageContext, children }) => {
+const Layout = ({ pageContext, children, path }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +28,7 @@ const Layout = ({ pageContext, children }) => {
   return (
     <>
       <Header siteTitle={pageContext?.frontmatter.title || data.site.siteMetadata?.title} />
-      <SEO title={pageContext?.frontmatter.title || data.site.siteMetadata?.title} description={pageContext?.frontmatter.description}/>
+      <SEO title={pageContext?.frontmatter.title} description={pageContext?.frontmatter.description} url={path} />
       <main>{children}</main>
       <Footer />
     </>

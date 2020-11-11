@@ -26,7 +26,7 @@ const IndexPage = ({data}) => {
     <div className="hero">
       <Img
         fixed={data.logo.childImageSharp.fixed}
-        alt="A corgi smiling happily"
+        alt="Zwift Workout Logo"
       />
       <h1>Zwift Workout Editor</h1>
       <a href="/editor/new" className="btn btn-primary btn-xl">
@@ -77,10 +77,10 @@ const IndexPage = ({data}) => {
         <h2>Do you like this?</h2>
         <p>Please help me out by sharing this page on Social Media</p>
         <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Zwift%20Workout%20Editor%20https://www.zwiftworkout.com/">
-        <Img fixed={data.twitter.childImageSharp.fixed} />
+        <Img fixed={data.twitter.childImageSharp.fixed} alt="Twitter logo" />
         </a>
         <a href="#share" onClick={shareOnFacebook}>
-          <Img fixed={data.facebook.childImageSharp.fixed} />
+          <Img fixed={data.facebook.childImageSharp.fixed} alt="Facebook logo" />
         </a>
       </div>
     </div>

@@ -35,20 +35,20 @@ const IndexPage = ({data}) => {
       <div className="perks">
         <div>
           <h3>
-            <FontAwesomeIcon icon={faBiking} fixedWidth />
-            <FontAwesomeIcon icon={faRunning} fixedWidth /> Bike & Run
+            <FontAwesomeIcon icon={faBiking} size="1x" fixedWidth />
+            <FontAwesomeIcon icon={faRunning} size="1x" fixedWidth /> Bike & Run
           </h3>
           <p>Works both for Running and Cycling workouts</p>
         </div>
         <div>
           <h3>
-            <FontAwesomeIcon icon={faBolt} fixedWidth /> Fast
+            <FontAwesomeIcon icon={faBolt} size="1x" fixedWidth /> Fast
           </h3>
           <p>Super fast Online editor for your Zwift workout files.</p>
         </div>
         <div>
           <h3>
-            <FontAwesomeIcon icon={faLaptop} fixedWidth /> CPU Friendly
+            <FontAwesomeIcon icon={faLaptop} size="1x" fixedWidth /> CPU Friendly
           </h3>
           <p>
             Edit your workout files outside Zwift - don't overload you computer
@@ -56,13 +56,13 @@ const IndexPage = ({data}) => {
         </div>
         <div>
           <h3>
-            <FontAwesomeIcon icon={faCloud} fixedWidth /> Share
+            <FontAwesomeIcon icon={faCloud} size="1x" fixedWidth /> Share
           </h3>
           <p>Easily share your workout files with your friends</p>
         </div>
         <div>
           <h3>
-            <FontAwesomeIcon icon={faPiggyBank} fixedWidth /> Open Source
+            <FontAwesomeIcon icon={faPiggyBank} size="1x" fixedWidth /> Open Source
           </h3>
           <p>This software is free to use.</p>
         </div>
@@ -85,9 +85,9 @@ const IndexPage = ({data}) => {
       <p>Using Zwift Workout Editor should be pretty easy and I'm sure you won't need instructions.</p>
       <p>In case you do don't worry - I've put together few quick How To articles for you.</p>
       <ul className="tutorials">
-        <li><FontAwesomeIcon icon={faBiking} size="lg" fixedWidth /> <Link to="/how-to-create-a-custom-cycling-workout-for-zwift"> How to create a custom cycling Workout for Zwift</Link></li>
-        <li><FontAwesomeIcon icon={faRunning} size="lg" fixedWidth /> <Link to="/how-to-create-a-custom-running-workout-for-zwift"> How to create a custom running Workout for Zwift</Link></li>
-        <li><FontAwesomeIcon icon={faUpload} size="lg" fixedWidth /> <Link to="/how-to-import-a-custom-workout-on-zwift"> How to import a custom workout on Zwift</Link></li>
+        <li><FontAwesomeIcon icon={faBiking} size="2x" fixedWidth /> <Link to="/how-to-create-a-custom-cycling-workout-for-zwift"> How to create a custom cycling Workout for Zwift</Link></li>
+        <li><FontAwesomeIcon icon={faRunning} size="2x" fixedWidth /> <Link to="/how-to-create-a-custom-running-workout-for-zwift"> How to create a custom running Workout for Zwift</Link></li>
+        <li><FontAwesomeIcon icon={faUpload} size="2x" fixedWidth /> <Link to="/how-to-import-a-custom-workout-on-zwift"> How to import a custom workout on Zwift</Link></li>
       </ul>      
     </div>
     <div className="black">

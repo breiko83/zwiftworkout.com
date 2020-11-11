@@ -1,16 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
-import Icon from '../images/icon.png'
-import Facebook from '../images/facebook.png'
-import Twitter from '../images/twitter.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBolt, faLaptop, faCloud, faPiggyBank, faRunning, faBiking, faUpload } from '@fortawesome/free-solid-svg-icons'
 
 import './index.css'
 
-const IndexPage = () => {
+const IndexPage = ({data}) => {
 
   function shareOnFacebook() {
     window.open(
@@ -23,7 +20,10 @@ const IndexPage = () => {
   return(
   <Layout>
     <div className="hero">
-      <img src={Icon} alt="logo" width="100" />
+      <Img
+        fixed={data.logo.childImageSharp.fixed}
+        alt="A corgi smiling happily"
+      />
       <h1>Zwift Workout Editor</h1>
       <a href="/editor/new" className="btn btn-primary btn-xl">
         Open Editor
@@ -73,10 +73,10 @@ const IndexPage = () => {
         <h2>Do you like this?</h2>
         <p>Please help me out by sharing this page on Social Media</p>
         <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Zwift%20Workout%20Editor%20https://www.zwiftworkout.com/">
-          <img src={Twitter} alt="Twitter" width="80" />
+        <Img fixed={data.twitter.childImageSharp.fixed} />
         </a>
         <a href="#share" onClick={shareOnFacebook}>
-          <img src={Facebook} alt="Facebook" width="80" />
+          <Img fixed={data.facebook.childImageSharp.fixed} />
         </a>
       </div>
     </div>
@@ -125,5 +125,31 @@ const IndexPage = () => {
     </div>
   </Layout>)
 }
+
+export const query = graphql`
+query {
+  facebook: file(relativePath: { eq: "facebook.png" }) {
+    childImageSharp {
+      fixed(width: 80, height: 80) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+  twitter: file(relativePath: { eq: "twitter.png" }) {
+    childImageSharp {
+      fixed(width: 80, height: 80) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+  logo: file(relativePath: { eq: "icon.png" }) {
+    childImageSharp {
+      fixed(width: 100, height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+}
+`
 
 export default IndexPage

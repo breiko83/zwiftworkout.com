@@ -126,11 +126,39 @@ a {
     padding: 10px;
   }
   .perks > div{
-    width: 50%;  
+    width: 100%;  
     height: auto;  
   }
   .about > div {
     width: 100%;
     margin: 0; 
+  }
+  .btn-xl {
+    font-size: 18px;
+    padding: 20px 60px;
+  }
+  .share {
+    padding: 20px;
+  }
+  .tutorial {    
+    padding: 20px;    
+  }
+  
+  .tutorial > ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    flex-direction: column;
+  }
+  
+  .tutorial > ul > li {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .about {
+    padding: 20px;
   }
 }

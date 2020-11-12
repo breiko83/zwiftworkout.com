@@ -13,10 +13,10 @@ const Footer = () => (
         <Link to="/privacy">Privacy Policy</Link>
       </li>
       <li>
-        <a href="https://github.com/breiko83/zwo-editor" target="blank">
+        <a href="https://github.com/breiko83/zwo-editor/issues" target="blank">
           Report an issue
         </a>
-      </li>
+      </li>      
     </ul>
   </div>
 )

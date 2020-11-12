@@ -124,6 +124,9 @@ const IndexPage = ({data}) => {
             </a>
             .
           </p>
+          <p>
+            For any other queries find me on <a href="https://twitter.com/CarloSchiesaro" target="blank">Twitter</a>.
+          </p>
         </div>
       </div>
     </div>

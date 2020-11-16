@@ -61,5 +61,6 @@ module.exports = {
         trackingId: "UA-55073449-9"        
       },
     },
+    `gatsby-plugin-remove-trailing-slashes`
   ],
 }

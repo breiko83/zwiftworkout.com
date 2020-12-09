@@ -1,2 +1,1 @@
 /editor/* https://zwiftworkout.netlify.app/editor/:splat 200!
-.netlify/functions/* https://zwiftworkout.netlify.app/netlify/functions/:splat 200!

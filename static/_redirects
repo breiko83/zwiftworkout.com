@@ -1,2 +1,4 @@
 /editor/* https://zwiftworkout.netlify.app/editor/:splat 200!
 /static/media/* https://zwiftworkout.netlify.app/static/media/:splat 200!
+/static/js/* https://zwiftworkout.netlify.app/static/js/:splat 200!
+/static/css/* https://zwiftworkout.netlify.app/static/css/:splat 200!

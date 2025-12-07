@@ -12,15 +12,6 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 const IndexPage = ({data}) => {
-
-  function shareOnFacebook() {
-    window.open(
-      'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent('https://www.zwiftworkout.com/'),
-      'facebook-share-dialog',
-      'width=626,height=436');
-    return false;
-  }
-
   return(
   <Layout>
     <div className="hero">
@@ -75,13 +66,8 @@ const IndexPage = ({data}) => {
     <div className="blue">
       <div className="share" id="share">
         <h2>Do you like this?</h2>
-        <p>Please help me out by sharing this page on Social Media</p>
-        <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Zwift%20Workout%20Editor%20https://www.zwiftworkout.com/">
-        <Img fixed={data.twitter.childImageSharp.fixed} alt="Twitter logo" />
-        </a>
-        <a href="#share" onClick={shareOnFacebook}>
-          <Img fixed={data.facebook.childImageSharp.fixed} alt="Facebook logo" />
-        </a>
+        <p>Please support the project with a small donation</p>
+        <a href="https://www.buymeacoffee.com/carloschieh" target="_blank" rel="noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{height: '60px', width: '217px'}} /></a>
       </div>
     </div>
     <div className="tutorial">

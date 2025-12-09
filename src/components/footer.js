@@ -5,7 +5,7 @@ import "./footer.css"
 const Footer = () => (
   <div className="footer">
     <ul>
-      <li>Zwift Workout v1.4 &copy; 2020 Sharpify Ltd All Rights Reserved</li>
+      <li>Zwift Workout v2.0 &copy; {new Date().getFullYear()} Sharpify Ltd All Rights Reserved</li>
       <li>
         <Link to="/terms">Terms of Service</Link>
       </li>

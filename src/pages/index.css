@@ -10,6 +10,42 @@ h2 {
   padding: 50px;
 }
 
+.stats {
+  background-color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.stats > h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00C46A;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #555;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
 a {
   text-decoration: none;
   color: #00C46A
@@ -111,6 +147,13 @@ a {
   margin: 20px auto;  
   margin-top: 0;
 }
+
+.disclaimer {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
 .share {
   text-align: center;
   color: white;
@@ -124,6 +167,16 @@ a {
 @media (max-width: 720px) {
   .features {
     padding: 10px;
+  }
+  .stats {
+    padding: 30px 20px;
+    gap: 40px;
+  }
+  .stat-number {
+    font-size: 36px;
+  }
+  .stat-label {
+    font-size: 16px;
   }
   .perks > div{
     width: 100%;  

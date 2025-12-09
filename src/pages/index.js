@@ -24,6 +24,19 @@ const IndexPage = ({data}) => {
         Open Editor
       </a>
     </div>
+    <div className="stats">
+      <h2>Users' Favorite Running & Cycling Workout Editor</h2>
+      <div className="stats-grid">
+        <div className="stat-item">
+          <div className="stat-number">11,000+</div>
+          <div className="stat-label">Users</div>
+        </div>
+        <div className="stat-item">
+          <div className="stat-number">47,000+</div>
+          <div className="stat-label">Workouts Generated</div>
+        </div>
+      </div>
+    </div>
     <div className="features">
       <h2>Top features</h2>
       <p>Why should I use it?</p>
@@ -112,6 +125,9 @@ const IndexPage = ({data}) => {
           </p>
           <p>
             For any other queries find me on <a href="https://twitter.com/CarloSchiesaro" target="blank">Twitter</a>.
+          </p>
+          <p className="disclaimer">
+            This website is not affiliated with Zwift. Zwift is a registered trademark of Zwift, Inc.
           </p>
         </div>
       </div>

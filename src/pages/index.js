@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
@@ -12,6 +12,9 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 const IndexPage = ({data}) => {
+  const [bannerVisible, setBannerVisible] = useState(true)
+  const [bannerVariant] = useState(() => Math.random() < 0.5 ? 'A' : 'B')
+
   return(
   <Layout>
     <div className="hero">
@@ -93,6 +96,44 @@ const IndexPage = ({data}) => {
         <li><FontAwesomeIcon icon={faUpload} size="2x" fixedWidth /> <Link to="/how-to-import-a-custom-workout-on-zwift"> How to import a custom workout on Zwift</Link></li>
       </ul>      
     </div>
+    {bannerVisible && bannerVariant === 'A' && (
+      <div className="floating-banner">
+        <button className="banner-close" onClick={() => setBannerVisible(false)} aria-label="Dismiss">×</button>
+        <Img
+          fixed={data.aicyclingcoachIcon.childImageSharp.fixed}
+          alt="AI Cycling Coach"
+          className="banner-icon"
+        />
+        <div className="banner-content">
+          <strong>AI Cycling Coach</strong>
+          <p>Hey! I developed a service to generate personalized training plans powered by Strava data</p>
+          <a href="https://aicyclingcoach.com/subscriptions/new?utm_source=zwiftworkout&utm_medium=banner&utm_campaign=30days_free" target="_blank" rel="noreferrer" className="btn btn-primary banner-cta">
+            Try 30 days free
+          </a>
+        </div>
+      </div>
+    )}
+    {bannerVisible && bannerVariant === 'B' && (
+      <div className="floating-banner">
+        <button className="banner-close" onClick={() => setBannerVisible(false)} aria-label="Dismiss">×</button>
+        <Img
+          fixed={data.aicyclingcoachIcon.childImageSharp.fixed}
+          alt="AI Cycling Coach"
+          className="banner-icon"
+        />
+        <div className="banner-content">
+          <strong>AI Cycling Coach</strong>
+          <p>Hey! I developed a service to generate personalized training plans powered by Strava data</p>
+          <div className="banner-coupon">
+            <span className="banner-coupon-label">50% off with code</span>
+            <span className="banner-coupon-code">ZWIFTWORKOUT</span>
+          </div>
+          <a href="https://aicyclingcoach.com/subscriptions/new?utm_source=zwiftworkout&utm_medium=banner&utm_campaign=coupon_50off" target="_blank" rel="noreferrer" className="btn btn-primary banner-cta">
+            Claim 50% off
+          </a>
+        </div>
+      </div>
+    )}
     <div className="black">
       <div className="about">
         <h2>About me</h2>
@@ -154,6 +195,13 @@ query {
   logo: file(relativePath: { eq: "icon.png" }) {
     childImageSharp {
       fixed(width: 100, height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+  aicyclingcoachIcon: file(relativePath: { eq: "aicyclingcoach_icon.png" }) {
+    childImageSharp {
+      fixed(width: 88, height: 88) {
         ...GatsbyImageSharpFixed
       }
     }

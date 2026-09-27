@@ -18,6 +18,7 @@ const IndexPage = ({data}) => {
       <Img
         fixed={data.logo.childImageSharp.fixed}
         alt="Zwift Workout Logo"
+        fadeIn={false}
       />
       <h1>Zwift Workout Editor</h1>
       <div className="hero-actions">
@@ -159,7 +160,7 @@ query {
   logo: file(relativePath: { eq: "icon.png" }) {
     childImageSharp {
       fixed(width: 100, height: 100) {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_noBase64
       }
     }
   }

@@ -20,9 +20,14 @@ const IndexPage = ({data}) => {
         alt="Zwift Workout Logo"
       />
       <h1>Zwift Workout Editor</h1>
-      <a href="/editor/new" className="btn btn-primary btn-xl">
-        Open Editor
-      </a>
+      <div className="hero-actions">
+        <a href="/editor/new" className="btn btn-primary btn-xl">
+          Open Editor
+        </a>
+        <a href="/workouts" className="btn btn-secondary btn-xl">
+          Browse Workouts
+        </a>
+      </div>
     </div>
     <div className="stats">
       <h2>Users' Favorite Running & Cycling Workout Editor</h2>

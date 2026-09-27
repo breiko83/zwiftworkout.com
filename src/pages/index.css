@@ -77,6 +77,22 @@ a {
   padding: 20px 60px;
 }
 
+.btn-secondary {
+  color: #00C46A;
+  border-color: #00C46A;
+}
+
+.btn-secondary:hover {
+  background-color: #f2fcf7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
 .features {
   text-align: center;
   padding: 50px;
